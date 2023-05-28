@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "singularName": "book",
+    "pluralName": "books",
+    "displayName": "Book",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "default": "name"
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "gradeLevel": {
+      "max": 6,
+      "min": 1,
+      "required": false,
+      "type": "integer"
+    },
+    "lexileLevel": {
+      "type": "integer"
+    },
+    "pages": {
+      "required": true,
+      "type": "integer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "fiction",
+        "non fiction"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "newberryWinner": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
